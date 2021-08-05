@@ -27,18 +27,21 @@
 .box.red {
   background-color: red;
   --animation-duration: 2s;
+  --animation-rotation: -360deg;
   --x: 110px;
 }
 
 .box.orange {
   background-color: yellow;
   --animation-duration: 2s;
+  --animation-rotation: 0deg;
   --x: 0px;
 }
 
 .box.yellow {
   background-color: dodgerblue;
   --animation-duration: 2s;
+  --animation-rotation: 360deg;
   --x: -110px;
 }
 
@@ -48,7 +51,7 @@
     border-radius: 5px;
   }
   100% {
-    transform: translate(var(--x), -50px) rotate(360deg);
+    transform: translate(var(--x), -50px) rotate(var(--animation-rotation));
     border-radius: 50%;
   }
 }
